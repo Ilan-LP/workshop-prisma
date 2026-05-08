@@ -55,6 +55,7 @@ Then run:
 
 ```bash
 npx prisma migrate dev
+npx prisma generate
 ```
 
 ---
