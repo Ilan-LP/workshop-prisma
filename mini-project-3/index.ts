@@ -1,4 +1,3 @@
-import { $Enums } from '../generated/prisma/browser';
 import { prisma } from '../lib/prisma';
 
 export async function createTag(name: string) {
@@ -13,7 +12,7 @@ export async function removeTagFromGame(gameId: number, tagId: number) {
     // TODO
 }
 
-export async function getGamesWithTag(gameId: number) {
+export async function getGameWithTags(gameId: number) {
     // TODO
 }
 
