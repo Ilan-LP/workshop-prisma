@@ -8,13 +8,13 @@ In this first mini-project, you will implement a basic **CRUD** (Create, Read, U
 
 Fill in `mini-project-1/index.ts` with the following 5 functions:
 
-| Function                        | Description                 |
-| ------------------------------- | --------------------------- |
-| `createGame(title, studio)`     | Creates a new game          |
-| `getAllGames()`                 | Returns all games           |
-| `getGameById(id)`               | Returns a game by their ID  |
-| `updateGameTitle(id, newTitle)` | Updates the title of a game |
-| `deleteGame(id)`                | Deletes a game              |
+| Function                        | Description                 | Returns                |
+| ------------------------------- | --------------------------- | ---------------------- |
+| `createGame(title, studio)`     | Creates a new game          | -                      |
+| `getAllGames()`                 | Returns all games           | Array of `Game` object |
+| `getGameById(id)`               | Returns a game by its ID    | `Game` object          |
+| `updateGameTitle(id, newTitle)` | Updates the title of a game | -                      |
+| `deleteGame(id)`                | Deletes a game              | -                      |
 
 ---
 

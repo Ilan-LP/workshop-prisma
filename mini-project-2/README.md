@@ -8,13 +8,13 @@ In this second mini-project, you will extend the schema with a `Player` model an
 
 Fill in `mini-project-2/index.ts` with the following functions:
 
-| Function                                | Description                                       |
-| --------------------------------------- | ------------------------------------------------- |
-| `createPlayer(username, level, gameId)` | Creates a new player linked to a game             |
-| `getPlayersByGame(gameId)`              | Returns all players registered in a specific game |
-| `getPlayerWithGame(playerId)`           | Returns a player with their game included         |
-| `getGameWithPlayers(gameId)`            | Returns a game with all its players included      |
-| `deletePlayer(playerId)`                | Deletes a player                                  |
+| Function                                | Description                                       | Returns                    |
+| --------------------------------------- | ------------------------------------------------- | -------------------------- |
+| `createPlayer(username, level, gameId)` | Creates a new player linked to a game             | -                          |
+| `getPlayersByGame(gameId)`              | Returns all players registered in a specific game | Array of `Player` object   |
+| `getPlayerWithGame(playerId)`           | Returns a player with their game included         | `Player` object with game  |
+| `getGameWithPlayers(gameId)`            | Returns a game with all its players included      | `Game` object with players |
+| `deletePlayer(playerId)`                | Deletes a player                                  | -                          |
 
 ---
 

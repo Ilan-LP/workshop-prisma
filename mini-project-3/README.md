@@ -8,14 +8,14 @@ In this third mini-project, you will extend the schema with a `Tag` model and im
 
 Fill in `mini-project-3/index.ts` with the following functions:
 
-| Function                           | Description                                         |
-| ---------------------------------- | --------------------------------------------------- |
-| `createTag(name)`                  | Creates a new tag                                   |
-| `addTagToGame(gameId, tagId)`      | Links an existing tag to an existing game           |
-| `removeTagFromGame(gameId, tagId)` | Removes a tag from a game (without deleting either) |
-| `getGameWithTags(gameId)`          | Returns a game with all its tags included           |
-| `getGamesByTag(tagId)`             | Returns all games linked to a specific tag          |
-| `deleteTag(tagId)`                 | Deletes a tag and all its related GameTag entries   |
+| Function                           | Description                                         | Returns                 |
+| ---------------------------------- | --------------------------------------------------- | ----------------------- |
+| `createTag(name)`                  | Creates a new tag                                   | -                       |
+| `addTagToGame(gameId, tagId)`      | Links an existing tag to an existing game           | -                       |
+| `removeTagFromGame(gameId, tagId)` | Removes a tag from a game (without deleting either) | -                       |
+| `getGameWithTags(gameId)`          | Returns a game with all its tags included           | `Game` object with tags |
+| `getGamesByTag(tagId)`             | Returns all games linked to a specific tag          | Array of `Game` object  |
+| `deleteTag(tagId)`                 | Deletes a tag and all its related GameTag entries   | -                       |
 
 ---
 
