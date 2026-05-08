@@ -66,7 +66,11 @@ npm install
 
 ### 2. Set up your database
 
-Create a free PostgreSQL database using `npx create-db` and copy the connection URL.
+Create a free PostgreSQL database and copy the connection URL.
+
+```bash
+npx create-db
+```
 
 ### 3. Configure your environment
 
@@ -81,7 +85,7 @@ DATABASE_URL="your-connection-url-here"
 ### 4. Run the first migration
 
 ```bash
-npx prisma migrate dev
+npx prisma generate
 ```
 
 You're ready to start **mini-project-1**.
