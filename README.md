@@ -76,6 +76,8 @@ Create a `.env` file at the root:
 DATABASE_URL="your-connection-url-here"
 ```
 
+> Dans la `DATABASE_URL` générée, remplacer `ssl-mode` par `sslmode=verify-full`.
+
 ### 4. Run the first migration
 
 ```bash
