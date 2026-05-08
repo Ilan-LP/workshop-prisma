@@ -1,0 +1,28 @@
+{
+    "name": "prisma-la-puissance-du-sql-sans-la-complexite-des-requetes",
+    "version": "1.0.0",
+    "description": "This workshop introduces Prisma ORM through 3 progressive mini-projects built in a single project. The schema evolves at each step, just like in a real codebase.",
+    "license": "MIT",
+    "author": "Ilan LP",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "test": "npx tsx tests/mini-project-1.ts && npx tsx tests/mini-project-2.ts && npx tsx tests/mini-project-3.ts",
+        "test1": "npx tsx tests/mini-project-1.ts",
+        "test2": "npx tsx tests/mini-project-2.ts",
+        "test3": "npx tsx tests/mini-project-3.ts"
+    },
+    "devDependencies": {
+        "@types/node": "^25.6.2",
+        "@types/pg": "^8.20.0",
+        "prisma": "^7.8.0",
+        "tsx": "^4.21.0",
+        "typescript": "^6.0.3"
+    },
+    "dependencies": {
+        "@prisma/adapter-pg": "^7.8.0",
+        "@prisma/client": "^7.8.0",
+        "dotenv": "^17.4.2",
+        "pg": "^8.20.0"
+    }
+}
