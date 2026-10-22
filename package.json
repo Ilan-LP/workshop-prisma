@@ -6,6 +6,9 @@
     "author": "Ilan LP",
     "type": "module",
     "main": "index.js",
+    "engines": {
+        "node": "^20.19.0 || ^22.12.0 || >=24.0.0"
+    },
     "scripts": {
         "test": "npx tsx tests/mini-project-1.ts && npx tsx tests/mini-project-2.ts && npx tsx tests/mini-project-3.ts",
         "test1": "npx tsx tests/mini-project-1.ts",

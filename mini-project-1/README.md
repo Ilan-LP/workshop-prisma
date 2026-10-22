@@ -26,7 +26,7 @@ Add the `Game` model to `prisma/schema.prisma`:
 Game {
   id        ... (auto increment)
   title     ... (must be unique)
-  author    ...
+  studio    ... (string)
 }
 ```
 
