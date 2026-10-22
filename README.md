@@ -30,14 +30,16 @@ workshop-prisma/
 │   └── README.md
 ├── prisma/
 │   ├── schema.prisma   <- evolves across mini-projects
-│   └── migrations/
+│   └── migrations/     <- created by `prisma migrate dev`
 ├── lib/
 │   └── prisma.ts
-├── test/
+├── tests/
 │   ├── mini-project-1.ts
 │   ├── mini-project-2.ts
 │   └── mini-project-3.ts
+├── .env.example
 ├── package.json
+├── prisma.config.ts
 ├── tsconfig.json
 └── README.md
 ```
@@ -46,11 +48,11 @@ workshop-prisma/
 
 ## Mini-Projects
 
-| #   | Subject           | New model(s) | Description                              |
-| --- | ----------------- | ------------ | ---------------------------------------- |
-| 1   | **CRUD**          | `User`       | Create, read, update and delete games    |
-| 2   | **1-N Relations** | `Post`       | Link player to their game                |
-| 3   | **M-N Relations** | `Tag`        | Link games and tags through a join table |
+| #   | Subject           | New model(s)     | Description                              |
+| --- | ----------------- | ---------------- | ---------------------------------------- |
+| 1   | **CRUD**          | `Game`           | Create, read, update and delete games    |
+| 2   | **1-N Relations** | `Player`         | Link player to their game                |
+| 3   | **M-N Relations** | `Tag`, `GameTag` | Link games and tags through a join table |
 
 Each mini-project builds on the previous one, don't delete your models when moving forward.
 
@@ -74,19 +76,21 @@ npx create-db
 
 ### 3. Configure your environment
 
-Create a `.env` file at the root:
+Create a `.env` file at the root (you can copy `.env.example`):
 
 ```env
 DATABASE_URL="your-connection-url-here"
 ```
 
-> Inside generated `DATABASE_URL`, replace `ssl-mode=require` by `sslmode=verify-full`.
+> Inside generated `DATABASE_URL`, replace `sslmode=require` by `sslmode=verify-full`.
 
-### 4. Run the first migration
+### 4. Generate the Prisma client
 
 ```bash
 npx prisma generate
 ```
+
+> In Prisma 7, `prisma migrate dev` does **not** regenerate the client, so run `npx prisma generate` after every schema change.
 
 You're ready to start **mini-project-1**.
 
@@ -115,7 +119,7 @@ npm test
 npm run test1
 ```
 
-> ⚠️ **WARNING:** Test your function will reset your DB
+> ⚠️ **WARNING:** The tests run `deleteMany` on the tables (`Game`, `Player`, `Tag`, `GameTag`) before and after each test, which wipes all their data. Never run them on a database that matters.
 
 ---
 
@@ -139,4 +143,4 @@ npx tsx mini-project-X/index.ts
 
 ## Prerequisites
 
-- Node.js >= 18
+- Node.js ^20.19, ^22.12 or >= 24 (required by Prisma 7)
